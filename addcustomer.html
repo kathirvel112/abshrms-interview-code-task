@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <title> Slide Navbar Example </title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/demo.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+</head>
+
+<body>
+
+    <main class="cd__main">
+        <header>
+            <div class="row">
+                <div class="col-1">
+                    <div class=" flex-column  sidebar-wrap" style="position: absolute;
+                    z-index: 1;">
+                        <a href="/" class="text-decoration-none logo-wrap">
+                        </a>
+                        <hr>
+                        <ul class="nav nav-pills flex-column mb-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active" aria-current="page">
+                                    <div class="icon-wrap">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <span> Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link">
+                                    <div class="icon-wrap">
+                                        <i class="fa fa-list" aria-hidden="true"></i>
+                                    </div>
+
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link">
+                                    <div class="icon-wrap">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    </div>
+                                    <span>Orders</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link">
+                                    <div class="icon-wrap">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                    </div>
+                                    <span>User</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link">
+                                    <div class="icon-wrap">
+                                        <i class="fa fa-cog" aria-hidden="true"></i>
+                                    </div>
+
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <hr>
+                        <div class="dropdown">
+                            <a href="#" class="text-decoration-none dropdown-toggle  dropdown-wrap" id="dropdownUser2"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="icon-wrap">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                                <li><a class="dropdown-item" href="#">New project...</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Sign out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-11">
+                    <h6>Customer Creation</h6>
+
+                    <div>
+                        <nav>
+                            <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                    aria-selected="true">Add Customer</button>
+                                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                                    aria-selected="false">Bill and shipping</button>
+                                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact"
+                                    aria-selected="false">KYC Document</button>
+                            </div>
+                        </nav>
+                        <div class="tab-content p-3  bg-light" id="nav-tabContent">
+                            <div class="tab-pane fade active show" id="nav-home" role="tabpanel"
+                                aria-labelledby="nav-home-tab">
+
+                                <form id="customerForm" action="#" name="myForm" method="post">
+                                    <div class="row customer-nav">
+                                        <h6>Customer details</h6>
+                                        <div class="col-3 textfield">
+                                            <input class="form-control" type="text" name="customer_name"
+                                                placeholder="Customer Name*">
+                                        </div>
+                                        <div class="col-3 textfield">
+                                            <input class="form-control" type="number" name="gsinumber"
+                                                placeholder="GSI Number*">
+                                        </div>
+                                        <div class="col-3 textfield">
+                                            <input class="form-control" type="text" name="import_code"
+                                                placeholder="Import code*">
+                                        </div>
+                                        <div class="col-3 textfield">
+                                            <input class="form-control" type="number" name="phonenumber"
+                                                placeholder="Phonenumber*">
+                                        </div>
+                                        <div class="col-3 textfield">
+                                            <input class="form-control" type="text" name="email" placeholder="Email">
+                                        </div>
+                                        <div class="col-3 textfield">
+                                            <input class="form-control" type="text" name="website"
+                                                placeholder="Website*">
+                                        </div>
+                                        <!-- Add more input fields for other details -->
+                                    </div>
+                                    <div class="row customer-nav">
+                                        <h6>Address details</h6>
+                                        <div class="col-6 textfield*">
+                                            <input class="form-control" type="text" name="address1"
+                                                placeholder="Address1*">
+                                        </div>
+                                        <div class="col-6 textfield">
+                                            <input class="form-control" type="text" name="address2"
+                                                placeholder="Address2*">
+                                        </div>
+                                        <div class="col-3 textfield">
+                                            <input class="form-control" type="text" name="city" placeholder="City*">
+                                        </div>
+                                        <div class="col-3 textfield">
+                                            <input class="form-control" type="text" name="state" placeholder="State*">
+                                        </div>
+                                        <div class="col-3 textfield">
+                                            <input class="form-control" type="number" name="pincode"
+                                                placeholder="Pincode*">
+                                        </div>
+
+                                        <!-- Add more input fields for other details -->
+                                    </div>
+                                    <div class="row customer-nav">
+                                        <h6>Contact person</h6>
+                                        <div class="col-3 textfield">
+                                            <input class="form-control" type="text" name="Pocname"
+                                                placeholder="Pocname*">
+                                        </div>
+                                        <div class="col-3 textfield">
+                                            <input class="form-control" type="text" name="jobtitle"
+                                                placeholder="Jobtitle*">
+                                        </div>
+                                        <div class="col-3 textfield">
+                                            <input class="form-control" type="text" name="contactno1"
+                                                placeholder="Contactno1*">
+                                        </div>
+                                        <div class="col-3 textfield">
+                                            <input class="form-control" type="text" name="contactno2"
+                                                placeholder="Contactno2*">
+                                        </div>
+                                        <div class="col-3 textfield">
+                                            <input class="form-control" type="text" name="contact_email"
+                                                placeholder="Contact Email*">
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row customer-nav">
+                                        <h6>Authorisation details</h6>
+                                        <div class="col-4 textfield">
+                                            <input class="form-control" type="text" name="authorisation_person"
+                                                placeholder="Authorisation Person*">
+                                        </div>
+                                        <div class="col-4 textfield">
+                                            <input class="form-control" type="text" name="authorisation_person_design"
+                                                placeholder="Authorisation Person Design*">
+                                        </div>
+                                        <div class="col-4 textfield">
+                                            <input class="form-control" type="text"
+                                                name="authorisation_person_contact_number1"
+                                                placeholder="Authorisation Person Contact Number1*">
+                                        </div>
+                                        <div class="col-4 textfield">
+                                            <input class="form-control" type="text"
+                                                name="authorisation_person_contact_number2"
+                                                placeholder="Authorisation Person Contact Number 2*">
+                                        </div>
+
+                                    </div>
+
+                                    <div style="text-align: center;">
+                                        <button type="button" class="btn btn-outline-secondary"><a
+                                                href="index.html">Cancel</a></button>
+                                        <button type="submit" class="btn btn-outline-secondary"><a
+                                                href="index.html"></a>Save and Continue</button>
+                                    </div>
+
+                                </form>
+
+
+
+
+                                <div class="output"></div>
+
+                              
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <h6>No data found</h6>
+                        </div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <h6>No data found</h6>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            </div>
+
+
+
+
+        </header>
+    </main>
+    <script src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js'></script>
+    <script src="./js/script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (ev) {
+            const customerForm = document.getElementById("customerForm");
+            const outputDiv = document.querySelector(".output");
+            let customerData = [];
+
+            if (localStorage.getItem("customerData")) {
+                customerData = JSON.parse(localStorage.getItem("customerData"));
+                displayData();
+            }
+
+            customerForm.addEventListener("submit", function (ev) {
+                ev.preventDefault();
+                const formData = new FormData(customerForm);
+                const customerDetails = {};
+                for (const [key, value] of formData.entries()) {
+                    customerDetails[key] = value;
+                }
+                customerData.push(customerDetails);
+                localStorage.setItem("customerData", JSON.stringify(customerData));
+                displayData();
+                customerForm.reset();
+                window.location.href = "index.html";
+
+            });
+
+            function displayData() {
+                customerData.forEach(function (customer, index) {
+                    const customerDiv = document.createElement("div");
+                    customerDiv.innerHTML = `
+                       
+                    `;
+                    outputDiv.appendChild(customerDiv);
+                });
+            }
+        });
+
+    </script>
+</body>
+
+</html>
